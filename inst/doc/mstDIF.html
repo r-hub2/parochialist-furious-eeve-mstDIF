@@ -12,7 +12,7 @@
 
 <meta name="author" content="Rudolf Debelak" />
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-08-30" />
 
 <title>Testing for DIF with mstDIF</title>
 
@@ -340,7 +340,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">Testing for DIF with mstDIF</h1>
 <h4 class="author">Rudolf Debelak</h4>
-<h4 class="date">2024-08-29</h4>
+<h4 class="date">2024-08-30</h4>
 
 
 
@@ -795,41 +795,41 @@ underlying data and test:</p>
 <p>Using the summary command, we get the p-values:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">summary</span>(bootstrap_DIF)</span>
 <span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="co">#&gt;             stat p_value    N</span></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="co">#&gt; Item_8  41.43535   0.010  576</span></span>
-<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="co">#&gt; Item_33 35.32980   0.023  450</span></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="co">#&gt; Item_32 30.50668   0.031  450</span></span>
-<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="co">#&gt; Item_30 31.35700   0.042  450</span></span>
-<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a><span class="co">#&gt; Item_21 28.94987   0.053  424</span></span>
-<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="co">#&gt; Item_5  43.40601   0.081 1000</span></span>
-<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="co">#&gt; Item_16 27.69800   0.091  424</span></span>
-<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a><span class="co">#&gt; Item_25 28.84286   0.113  550</span></span>
-<span id="cb18-11"><a href="#cb18-11" tabindex="-1"></a><span class="co">#&gt; Item_24 28.25936   0.155  550</span></span>
-<span id="cb18-12"><a href="#cb18-12" tabindex="-1"></a><span class="co">#&gt; Item_22 27.19333   0.194  550</span></span>
-<span id="cb18-13"><a href="#cb18-13" tabindex="-1"></a><span class="co">#&gt; Item_7  37.26782   0.224 1000</span></span>
-<span id="cb18-14"><a href="#cb18-14" tabindex="-1"></a><span class="co">#&gt; Item_20 22.45761   0.239  424</span></span>
-<span id="cb18-15"><a href="#cb18-15" tabindex="-1"></a><span class="co">#&gt; Item_9  27.92269   0.243  576</span></span>
-<span id="cb18-16"><a href="#cb18-16" tabindex="-1"></a><span class="co">#&gt; Item_29 23.71674   0.247  450</span></span>
-<span id="cb18-17"><a href="#cb18-17" tabindex="-1"></a><span class="co">#&gt; Item_26 25.50687   0.303  550</span></span>
-<span id="cb18-18"><a href="#cb18-18" tabindex="-1"></a><span class="co">#&gt; Item_1  31.06844   0.451 1000</span></span>
-<span id="cb18-19"><a href="#cb18-19" tabindex="-1"></a><span class="co">#&gt; Item_28 22.58680   0.473  550</span></span>
-<span id="cb18-20"><a href="#cb18-20" tabindex="-1"></a><span class="co">#&gt; Item_23 22.57854   0.483  550</span></span>
-<span id="cb18-21"><a href="#cb18-21" tabindex="-1"></a><span class="co">#&gt; Item_11 21.29707   0.516  576</span></span>
-<span id="cb18-22"><a href="#cb18-22" tabindex="-1"></a><span class="co">#&gt; Item_14 23.01867   0.527  576</span></span>
-<span id="cb18-23"><a href="#cb18-23" tabindex="-1"></a><span class="co">#&gt; Item_15 18.65121   0.530  424</span></span>
-<span id="cb18-24"><a href="#cb18-24" tabindex="-1"></a><span class="co">#&gt; Item_3  28.14860   0.549 1000</span></span>
-<span id="cb18-25"><a href="#cb18-25" tabindex="-1"></a><span class="co">#&gt; Item_27 19.50961   0.624  550</span></span>
-<span id="cb18-26"><a href="#cb18-26" tabindex="-1"></a><span class="co">#&gt; Item_19 16.99457   0.681  424</span></span>
-<span id="cb18-27"><a href="#cb18-27" tabindex="-1"></a><span class="co">#&gt; Item_31 16.70285   0.687  450</span></span>
-<span id="cb18-28"><a href="#cb18-28" tabindex="-1"></a><span class="co">#&gt; Item_6  25.41009   0.747 1000</span></span>
-<span id="cb18-29"><a href="#cb18-29" tabindex="-1"></a><span class="co">#&gt; Item_35 16.22799   0.765  450</span></span>
-<span id="cb18-30"><a href="#cb18-30" tabindex="-1"></a><span class="co">#&gt; Item_10 16.43764   0.874  576</span></span>
-<span id="cb18-31"><a href="#cb18-31" tabindex="-1"></a><span class="co">#&gt; Item_18 13.13709   0.891  424</span></span>
-<span id="cb18-32"><a href="#cb18-32" tabindex="-1"></a><span class="co">#&gt; Item_13 15.50530   0.901  576</span></span>
-<span id="cb18-33"><a href="#cb18-33" tabindex="-1"></a><span class="co">#&gt; Item_12 16.06358   0.942  576</span></span>
-<span id="cb18-34"><a href="#cb18-34" tabindex="-1"></a><span class="co">#&gt; Item_17 13.01244   0.944  424</span></span>
-<span id="cb18-35"><a href="#cb18-35" tabindex="-1"></a><span class="co">#&gt; Item_2  20.48589   0.961 1000</span></span>
-<span id="cb18-36"><a href="#cb18-36" tabindex="-1"></a><span class="co">#&gt; Item_34 12.05401   0.963  450</span></span>
-<span id="cb18-37"><a href="#cb18-37" tabindex="-1"></a><span class="co">#&gt; Item_4  15.74184   0.993 1000</span></span></code></pre></div>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="co">#&gt; Item_8  41.43535   0.013  576</span></span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="co">#&gt; Item_33 35.32980   0.015  450</span></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="co">#&gt; Item_32 30.50668   0.047  450</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="co">#&gt; Item_30 31.35700   0.049  450</span></span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a><span class="co">#&gt; Item_21 28.94987   0.064  424</span></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="co">#&gt; Item_5  43.40601   0.085 1000</span></span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="co">#&gt; Item_16 27.69800   0.103  424</span></span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a><span class="co">#&gt; Item_25 28.84286   0.108  550</span></span>
+<span id="cb18-11"><a href="#cb18-11" tabindex="-1"></a><span class="co">#&gt; Item_24 28.25936   0.142  550</span></span>
+<span id="cb18-12"><a href="#cb18-12" tabindex="-1"></a><span class="co">#&gt; Item_7  37.26782   0.184 1000</span></span>
+<span id="cb18-13"><a href="#cb18-13" tabindex="-1"></a><span class="co">#&gt; Item_22 27.19333   0.199  550</span></span>
+<span id="cb18-14"><a href="#cb18-14" tabindex="-1"></a><span class="co">#&gt; Item_9  27.92269   0.246  576</span></span>
+<span id="cb18-15"><a href="#cb18-15" tabindex="-1"></a><span class="co">#&gt; Item_29 23.71674   0.246  450</span></span>
+<span id="cb18-16"><a href="#cb18-16" tabindex="-1"></a><span class="co">#&gt; Item_20 22.45761   0.261  424</span></span>
+<span id="cb18-17"><a href="#cb18-17" tabindex="-1"></a><span class="co">#&gt; Item_26 25.50687   0.316  550</span></span>
+<span id="cb18-18"><a href="#cb18-18" tabindex="-1"></a><span class="co">#&gt; Item_1  31.06844   0.453 1000</span></span>
+<span id="cb18-19"><a href="#cb18-19" tabindex="-1"></a><span class="co">#&gt; Item_28 22.58680   0.472  550</span></span>
+<span id="cb18-20"><a href="#cb18-20" tabindex="-1"></a><span class="co">#&gt; Item_23 22.57854   0.481  550</span></span>
+<span id="cb18-21"><a href="#cb18-21" tabindex="-1"></a><span class="co">#&gt; Item_14 23.01867   0.512  576</span></span>
+<span id="cb18-22"><a href="#cb18-22" tabindex="-1"></a><span class="co">#&gt; Item_11 21.29707   0.516  576</span></span>
+<span id="cb18-23"><a href="#cb18-23" tabindex="-1"></a><span class="co">#&gt; Item_15 18.65121   0.566  424</span></span>
+<span id="cb18-24"><a href="#cb18-24" tabindex="-1"></a><span class="co">#&gt; Item_3  28.14860   0.571 1000</span></span>
+<span id="cb18-25"><a href="#cb18-25" tabindex="-1"></a><span class="co">#&gt; Item_27 19.50961   0.630  550</span></span>
+<span id="cb18-26"><a href="#cb18-26" tabindex="-1"></a><span class="co">#&gt; Item_19 16.99457   0.689  424</span></span>
+<span id="cb18-27"><a href="#cb18-27" tabindex="-1"></a><span class="co">#&gt; Item_31 16.70285   0.693  450</span></span>
+<span id="cb18-28"><a href="#cb18-28" tabindex="-1"></a><span class="co">#&gt; Item_6  25.41009   0.719 1000</span></span>
+<span id="cb18-29"><a href="#cb18-29" tabindex="-1"></a><span class="co">#&gt; Item_35 16.22799   0.772  450</span></span>
+<span id="cb18-30"><a href="#cb18-30" tabindex="-1"></a><span class="co">#&gt; Item_18 13.13709   0.867  424</span></span>
+<span id="cb18-31"><a href="#cb18-31" tabindex="-1"></a><span class="co">#&gt; Item_10 16.43764   0.875  576</span></span>
+<span id="cb18-32"><a href="#cb18-32" tabindex="-1"></a><span class="co">#&gt; Item_13 15.50530   0.902  576</span></span>
+<span id="cb18-33"><a href="#cb18-33" tabindex="-1"></a><span class="co">#&gt; Item_12 16.06358   0.907  576</span></span>
+<span id="cb18-34"><a href="#cb18-34" tabindex="-1"></a><span class="co">#&gt; Item_2  20.48589   0.935 1000</span></span>
+<span id="cb18-35"><a href="#cb18-35" tabindex="-1"></a><span class="co">#&gt; Item_17 13.01244   0.935  424</span></span>
+<span id="cb18-36"><a href="#cb18-36" tabindex="-1"></a><span class="co">#&gt; Item_34 12.05401   0.970  450</span></span>
+<span id="cb18-37"><a href="#cb18-37" tabindex="-1"></a><span class="co">#&gt; Item_4  15.74184   0.998 1000</span></span></code></pre></div>
 <p>We see that items 8, 30, 32 and 33 show p-values below 0.0, similar
 to the analytical score-based test. As with the other tests, we could
 either correct for multiple testing or define hypotheses beforehand to
@@ -853,41 +853,41 @@ with the group_cont covariate:</p>
 <p>The results of this analysis are:</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="fu">summary</span>(bootstrap_DIF_2)</span>
 <span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="co">#&gt;             stat p_value    N</span></span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="co">#&gt; Item_18 34.00477   0.013  424</span></span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a><span class="co">#&gt; Item_5  47.12704   0.042 1000</span></span>
-<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a><span class="co">#&gt; Item_2  44.09327   0.073 1000</span></span>
-<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a><span class="co">#&gt; Item_35 28.95484   0.077  450</span></span>
-<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a><span class="co">#&gt; Item_32 25.54950   0.150  450</span></span>
-<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a><span class="co">#&gt; Item_7  39.03102   0.168 1000</span></span>
-<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a><span class="co">#&gt; Item_20 21.53959   0.287  424</span></span>
-<span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a><span class="co">#&gt; Item_23 25.68833   0.290  550</span></span>
-<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a><span class="co">#&gt; Item_12 26.29353   0.297  576</span></span>
-<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a><span class="co">#&gt; Item_16 21.58565   0.359  424</span></span>
-<span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a><span class="co">#&gt; Item_26 24.04213   0.389  550</span></span>
-<span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a><span class="co">#&gt; Item_1  31.87110   0.403 1000</span></span>
-<span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a><span class="co">#&gt; Item_10 23.00194   0.410  576</span></span>
-<span id="cb21-16"><a href="#cb21-16" tabindex="-1"></a><span class="co">#&gt; Item_27 22.10265   0.462  550</span></span>
-<span id="cb21-17"><a href="#cb21-17" tabindex="-1"></a><span class="co">#&gt; Item_30 19.56794   0.518  450</span></span>
-<span id="cb21-18"><a href="#cb21-18" tabindex="-1"></a><span class="co">#&gt; Item_9  22.30023   0.531  576</span></span>
-<span id="cb21-19"><a href="#cb21-19" tabindex="-1"></a><span class="co">#&gt; Item_3  29.74656   0.539 1000</span></span>
-<span id="cb21-20"><a href="#cb21-20" tabindex="-1"></a><span class="co">#&gt; Item_31 18.43406   0.567  450</span></span>
-<span id="cb21-21"><a href="#cb21-21" tabindex="-1"></a><span class="co">#&gt; Item_21 17.53189   0.630  424</span></span>
-<span id="cb21-22"><a href="#cb21-22" tabindex="-1"></a><span class="co">#&gt; Item_29 18.01397   0.634  450</span></span>
-<span id="cb21-23"><a href="#cb21-23" tabindex="-1"></a><span class="co">#&gt; Item_14 21.12367   0.652  576</span></span>
-<span id="cb21-24"><a href="#cb21-24" tabindex="-1"></a><span class="co">#&gt; Item_24 18.52007   0.676  550</span></span>
-<span id="cb21-25"><a href="#cb21-25" tabindex="-1"></a><span class="co">#&gt; Item_33 17.51145   0.681  450</span></span>
-<span id="cb21-26"><a href="#cb21-26" tabindex="-1"></a><span class="co">#&gt; Item_11 18.35649   0.696  576</span></span>
-<span id="cb21-27"><a href="#cb21-27" tabindex="-1"></a><span class="co">#&gt; Item_17 15.68125   0.762  424</span></span>
-<span id="cb21-28"><a href="#cb21-28" tabindex="-1"></a><span class="co">#&gt; Item_34 16.06359   0.763  450</span></span>
-<span id="cb21-29"><a href="#cb21-29" tabindex="-1"></a><span class="co">#&gt; Item_13 17.69414   0.768  576</span></span>
-<span id="cb21-30"><a href="#cb21-30" tabindex="-1"></a><span class="co">#&gt; Item_19 15.93857   0.776  424</span></span>
-<span id="cb21-31"><a href="#cb21-31" tabindex="-1"></a><span class="co">#&gt; Item_8  18.00935   0.780  576</span></span>
-<span id="cb21-32"><a href="#cb21-32" tabindex="-1"></a><span class="co">#&gt; Item_15 15.36422   0.804  424</span></span>
-<span id="cb21-33"><a href="#cb21-33" tabindex="-1"></a><span class="co">#&gt; Item_6  24.09979   0.806 1000</span></span>
-<span id="cb21-34"><a href="#cb21-34" tabindex="-1"></a><span class="co">#&gt; Item_25 16.05803   0.818  550</span></span>
-<span id="cb21-35"><a href="#cb21-35" tabindex="-1"></a><span class="co">#&gt; Item_28 17.04354   0.833  550</span></span>
-<span id="cb21-36"><a href="#cb21-36" tabindex="-1"></a><span class="co">#&gt; Item_22 16.08331   0.873  550</span></span>
-<span id="cb21-37"><a href="#cb21-37" tabindex="-1"></a><span class="co">#&gt; Item_4  16.80331   0.983 1000</span></span></code></pre></div>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="co">#&gt; Item_18 34.00477   0.008  424</span></span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a><span class="co">#&gt; Item_5  47.12704   0.044 1000</span></span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a><span class="co">#&gt; Item_2  44.09327   0.079 1000</span></span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a><span class="co">#&gt; Item_35 28.95484   0.082  450</span></span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a><span class="co">#&gt; Item_7  39.03102   0.133 1000</span></span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a><span class="co">#&gt; Item_32 25.54950   0.141  450</span></span>
+<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a><span class="co">#&gt; Item_23 25.68833   0.282  550</span></span>
+<span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a><span class="co">#&gt; Item_12 26.29353   0.304  576</span></span>
+<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a><span class="co">#&gt; Item_20 21.53959   0.307  424</span></span>
+<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a><span class="co">#&gt; Item_16 21.58565   0.349  424</span></span>
+<span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a><span class="co">#&gt; Item_26 24.04213   0.377  550</span></span>
+<span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a><span class="co">#&gt; Item_1  31.87110   0.402 1000</span></span>
+<span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a><span class="co">#&gt; Item_10 23.00194   0.411  576</span></span>
+<span id="cb21-16"><a href="#cb21-16" tabindex="-1"></a><span class="co">#&gt; Item_27 22.10265   0.456  550</span></span>
+<span id="cb21-17"><a href="#cb21-17" tabindex="-1"></a><span class="co">#&gt; Item_3  29.74656   0.489 1000</span></span>
+<span id="cb21-18"><a href="#cb21-18" tabindex="-1"></a><span class="co">#&gt; Item_30 19.56794   0.517  450</span></span>
+<span id="cb21-19"><a href="#cb21-19" tabindex="-1"></a><span class="co">#&gt; Item_9  22.30023   0.532  576</span></span>
+<span id="cb21-20"><a href="#cb21-20" tabindex="-1"></a><span class="co">#&gt; Item_31 18.43406   0.583  450</span></span>
+<span id="cb21-21"><a href="#cb21-21" tabindex="-1"></a><span class="co">#&gt; Item_21 17.53189   0.610  424</span></span>
+<span id="cb21-22"><a href="#cb21-22" tabindex="-1"></a><span class="co">#&gt; Item_14 21.12367   0.620  576</span></span>
+<span id="cb21-23"><a href="#cb21-23" tabindex="-1"></a><span class="co">#&gt; Item_29 18.01397   0.642  450</span></span>
+<span id="cb21-24"><a href="#cb21-24" tabindex="-1"></a><span class="co">#&gt; Item_33 17.51145   0.682  450</span></span>
+<span id="cb21-25"><a href="#cb21-25" tabindex="-1"></a><span class="co">#&gt; Item_24 18.52007   0.684  550</span></span>
+<span id="cb21-26"><a href="#cb21-26" tabindex="-1"></a><span class="co">#&gt; Item_11 18.35649   0.708  576</span></span>
+<span id="cb21-27"><a href="#cb21-27" tabindex="-1"></a><span class="co">#&gt; Item_34 16.06359   0.747  450</span></span>
+<span id="cb21-28"><a href="#cb21-28" tabindex="-1"></a><span class="co">#&gt; Item_19 15.93857   0.773  424</span></span>
+<span id="cb21-29"><a href="#cb21-29" tabindex="-1"></a><span class="co">#&gt; Item_13 17.69414   0.775  576</span></span>
+<span id="cb21-30"><a href="#cb21-30" tabindex="-1"></a><span class="co">#&gt; Item_17 15.68125   0.781  424</span></span>
+<span id="cb21-31"><a href="#cb21-31" tabindex="-1"></a><span class="co">#&gt; Item_6  24.09979   0.783 1000</span></span>
+<span id="cb21-32"><a href="#cb21-32" tabindex="-1"></a><span class="co">#&gt; Item_8  18.00935   0.787  576</span></span>
+<span id="cb21-33"><a href="#cb21-33" tabindex="-1"></a><span class="co">#&gt; Item_25 16.05803   0.801  550</span></span>
+<span id="cb21-34"><a href="#cb21-34" tabindex="-1"></a><span class="co">#&gt; Item_15 15.36422   0.802  424</span></span>
+<span id="cb21-35"><a href="#cb21-35" tabindex="-1"></a><span class="co">#&gt; Item_22 16.08331   0.839  550</span></span>
+<span id="cb21-36"><a href="#cb21-36" tabindex="-1"></a><span class="co">#&gt; Item_28 17.04354   0.850  550</span></span>
+<span id="cb21-37"><a href="#cb21-37" tabindex="-1"></a><span class="co">#&gt; Item_4  16.80331   0.991 1000</span></span></code></pre></div>
 <p>We find significant DIF effects for items 5 and 18.</p>
 <p>The permutation based DIF test works analogously. We therefore just
 demonstrate the commands and their output:</p>
@@ -904,79 +904,79 @@ demonstrate the commands and their output:</p>
 <p>The results for the categorical covariate are:</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">summary</span>(permutation_DIF)</span>
 <span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a><span class="co">#&gt;             stat p_value    N</span></span>
-<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a><span class="co">#&gt; Item_8  41.43535   0.006  576</span></span>
-<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a><span class="co">#&gt; Item_33 35.32980   0.008  450</span></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a><span class="co">#&gt; Item_8  41.43535   0.008  576</span></span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a><span class="co">#&gt; Item_33 35.32980   0.013  450</span></span>
 <span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="co">#&gt; Item_30 31.35700   0.038  450</span></span>
-<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a><span class="co">#&gt; Item_32 30.50668   0.047  450</span></span>
-<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a><span class="co">#&gt; Item_21 28.94987   0.064  424</span></span>
-<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a><span class="co">#&gt; Item_5  43.40601   0.080 1000</span></span>
-<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a><span class="co">#&gt; Item_16 27.69800   0.092  424</span></span>
-<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a><span class="co">#&gt; Item_25 28.84286   0.124  550</span></span>
-<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a><span class="co">#&gt; Item_24 28.25936   0.141  550</span></span>
-<span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a><span class="co">#&gt; Item_7  37.26782   0.202 1000</span></span>
-<span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a><span class="co">#&gt; Item_9  27.92269   0.208  576</span></span>
-<span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a><span class="co">#&gt; Item_22 27.19333   0.210  550</span></span>
-<span id="cb24-15"><a href="#cb24-15" tabindex="-1"></a><span class="co">#&gt; Item_29 23.71674   0.223  450</span></span>
-<span id="cb24-16"><a href="#cb24-16" tabindex="-1"></a><span class="co">#&gt; Item_20 22.45761   0.241  424</span></span>
-<span id="cb24-17"><a href="#cb24-17" tabindex="-1"></a><span class="co">#&gt; Item_26 25.50687   0.302  550</span></span>
-<span id="cb24-18"><a href="#cb24-18" tabindex="-1"></a><span class="co">#&gt; Item_1  31.06844   0.432 1000</span></span>
-<span id="cb24-19"><a href="#cb24-19" tabindex="-1"></a><span class="co">#&gt; Item_28 22.58680   0.463  550</span></span>
-<span id="cb24-20"><a href="#cb24-20" tabindex="-1"></a><span class="co">#&gt; Item_23 22.57854   0.474  550</span></span>
-<span id="cb24-21"><a href="#cb24-21" tabindex="-1"></a><span class="co">#&gt; Item_14 23.01867   0.483  576</span></span>
-<span id="cb24-22"><a href="#cb24-22" tabindex="-1"></a><span class="co">#&gt; Item_11 21.29707   0.506  576</span></span>
-<span id="cb24-23"><a href="#cb24-23" tabindex="-1"></a><span class="co">#&gt; Item_15 18.65121   0.533  424</span></span>
-<span id="cb24-24"><a href="#cb24-24" tabindex="-1"></a><span class="co">#&gt; Item_3  28.14860   0.598 1000</span></span>
-<span id="cb24-25"><a href="#cb24-25" tabindex="-1"></a><span class="co">#&gt; Item_27 19.50961   0.625  550</span></span>
-<span id="cb24-26"><a href="#cb24-26" tabindex="-1"></a><span class="co">#&gt; Item_31 16.70285   0.703  450</span></span>
-<span id="cb24-27"><a href="#cb24-27" tabindex="-1"></a><span class="co">#&gt; Item_6  25.41009   0.710 1000</span></span>
-<span id="cb24-28"><a href="#cb24-28" tabindex="-1"></a><span class="co">#&gt; Item_19 16.99457   0.714  424</span></span>
-<span id="cb24-29"><a href="#cb24-29" tabindex="-1"></a><span class="co">#&gt; Item_35 16.22799   0.773  450</span></span>
-<span id="cb24-30"><a href="#cb24-30" tabindex="-1"></a><span class="co">#&gt; Item_10 16.43764   0.858  576</span></span>
-<span id="cb24-31"><a href="#cb24-31" tabindex="-1"></a><span class="co">#&gt; Item_18 13.13709   0.886  424</span></span>
-<span id="cb24-32"><a href="#cb24-32" tabindex="-1"></a><span class="co">#&gt; Item_17 13.01244   0.927  424</span></span>
-<span id="cb24-33"><a href="#cb24-33" tabindex="-1"></a><span class="co">#&gt; Item_13 15.50530   0.928  576</span></span>
-<span id="cb24-34"><a href="#cb24-34" tabindex="-1"></a><span class="co">#&gt; Item_12 16.06358   0.936  576</span></span>
-<span id="cb24-35"><a href="#cb24-35" tabindex="-1"></a><span class="co">#&gt; Item_2  20.48589   0.955 1000</span></span>
-<span id="cb24-36"><a href="#cb24-36" tabindex="-1"></a><span class="co">#&gt; Item_34 12.05401   0.971  450</span></span>
-<span id="cb24-37"><a href="#cb24-37" tabindex="-1"></a><span class="co">#&gt; Item_4  15.74184   0.989 1000</span></span></code></pre></div>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a><span class="co">#&gt; Item_32 30.50668   0.044  450</span></span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a><span class="co">#&gt; Item_21 28.94987   0.061  424</span></span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a><span class="co">#&gt; Item_5  43.40601   0.094 1000</span></span>
+<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a><span class="co">#&gt; Item_16 27.69800   0.108  424</span></span>
+<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a><span class="co">#&gt; Item_25 28.84286   0.148  550</span></span>
+<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a><span class="co">#&gt; Item_24 28.25936   0.157  550</span></span>
+<span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a><span class="co">#&gt; Item_7  37.26782   0.182 1000</span></span>
+<span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a><span class="co">#&gt; Item_22 27.19333   0.214  550</span></span>
+<span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a><span class="co">#&gt; Item_9  27.92269   0.224  576</span></span>
+<span id="cb24-15"><a href="#cb24-15" tabindex="-1"></a><span class="co">#&gt; Item_29 23.71674   0.264  450</span></span>
+<span id="cb24-16"><a href="#cb24-16" tabindex="-1"></a><span class="co">#&gt; Item_20 22.45761   0.266  424</span></span>
+<span id="cb24-17"><a href="#cb24-17" tabindex="-1"></a><span class="co">#&gt; Item_26 25.50687   0.286  550</span></span>
+<span id="cb24-18"><a href="#cb24-18" tabindex="-1"></a><span class="co">#&gt; Item_1  31.06844   0.428 1000</span></span>
+<span id="cb24-19"><a href="#cb24-19" tabindex="-1"></a><span class="co">#&gt; Item_14 23.01867   0.479  576</span></span>
+<span id="cb24-20"><a href="#cb24-20" tabindex="-1"></a><span class="co">#&gt; Item_28 22.58680   0.481  550</span></span>
+<span id="cb24-21"><a href="#cb24-21" tabindex="-1"></a><span class="co">#&gt; Item_23 22.57854   0.492  550</span></span>
+<span id="cb24-22"><a href="#cb24-22" tabindex="-1"></a><span class="co">#&gt; Item_11 21.29707   0.546  576</span></span>
+<span id="cb24-23"><a href="#cb24-23" tabindex="-1"></a><span class="co">#&gt; Item_15 18.65121   0.563  424</span></span>
+<span id="cb24-24"><a href="#cb24-24" tabindex="-1"></a><span class="co">#&gt; Item_3  28.14860   0.597 1000</span></span>
+<span id="cb24-25"><a href="#cb24-25" tabindex="-1"></a><span class="co">#&gt; Item_27 19.50961   0.626  550</span></span>
+<span id="cb24-26"><a href="#cb24-26" tabindex="-1"></a><span class="co">#&gt; Item_19 16.99457   0.683  424</span></span>
+<span id="cb24-27"><a href="#cb24-27" tabindex="-1"></a><span class="co">#&gt; Item_31 16.70285   0.708  450</span></span>
+<span id="cb24-28"><a href="#cb24-28" tabindex="-1"></a><span class="co">#&gt; Item_6  25.41009   0.740 1000</span></span>
+<span id="cb24-29"><a href="#cb24-29" tabindex="-1"></a><span class="co">#&gt; Item_35 16.22799   0.771  450</span></span>
+<span id="cb24-30"><a href="#cb24-30" tabindex="-1"></a><span class="co">#&gt; Item_10 16.43764   0.853  576</span></span>
+<span id="cb24-31"><a href="#cb24-31" tabindex="-1"></a><span class="co">#&gt; Item_13 15.50530   0.902  576</span></span>
+<span id="cb24-32"><a href="#cb24-32" tabindex="-1"></a><span class="co">#&gt; Item_18 13.13709   0.902  424</span></span>
+<span id="cb24-33"><a href="#cb24-33" tabindex="-1"></a><span class="co">#&gt; Item_17 13.01244   0.921  424</span></span>
+<span id="cb24-34"><a href="#cb24-34" tabindex="-1"></a><span class="co">#&gt; Item_12 16.06358   0.937  576</span></span>
+<span id="cb24-35"><a href="#cb24-35" tabindex="-1"></a><span class="co">#&gt; Item_2  20.48589   0.943 1000</span></span>
+<span id="cb24-36"><a href="#cb24-36" tabindex="-1"></a><span class="co">#&gt; Item_34 12.05401   0.964  450</span></span>
+<span id="cb24-37"><a href="#cb24-37" tabindex="-1"></a><span class="co">#&gt; Item_4  15.74184   0.996 1000</span></span></code></pre></div>
 <p>The results for the continuous covariate are:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">summary</span>(permutation_DIF_2)</span>
 <span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="co">#&gt;             stat p_value    N</span></span>
 <span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a><span class="co">#&gt; Item_18 34.00477   0.007  424</span></span>
-<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="co">#&gt; Item_5  47.12704   0.043 1000</span></span>
-<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="co">#&gt; Item_2  44.09327   0.072 1000</span></span>
-<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="co">#&gt; Item_35 28.95484   0.080  450</span></span>
-<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a><span class="co">#&gt; Item_32 25.54950   0.139  450</span></span>
-<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="co">#&gt; Item_7  39.03102   0.146 1000</span></span>
-<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a><span class="co">#&gt; Item_12 26.29353   0.287  576</span></span>
-<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a><span class="co">#&gt; Item_20 21.53959   0.299  424</span></span>
-<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a><span class="co">#&gt; Item_23 25.68833   0.324  550</span></span>
-<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a><span class="co">#&gt; Item_16 21.58565   0.346  424</span></span>
-<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a><span class="co">#&gt; Item_26 24.04213   0.381  550</span></span>
-<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a><span class="co">#&gt; Item_10 23.00194   0.409  576</span></span>
-<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a><span class="co">#&gt; Item_27 22.10265   0.426  550</span></span>
-<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a><span class="co">#&gt; Item_1  31.87110   0.433 1000</span></span>
-<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a><span class="co">#&gt; Item_3  29.74656   0.497 1000</span></span>
-<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a><span class="co">#&gt; Item_30 19.56794   0.542  450</span></span>
-<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a><span class="co">#&gt; Item_9  22.30023   0.552  576</span></span>
-<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a><span class="co">#&gt; Item_31 18.43406   0.571  450</span></span>
-<span id="cb25-21"><a href="#cb25-21" tabindex="-1"></a><span class="co">#&gt; Item_29 18.01397   0.607  450</span></span>
-<span id="cb25-22"><a href="#cb25-22" tabindex="-1"></a><span class="co">#&gt; Item_14 21.12367   0.626  576</span></span>
-<span id="cb25-23"><a href="#cb25-23" tabindex="-1"></a><span class="co">#&gt; Item_21 17.53189   0.645  424</span></span>
-<span id="cb25-24"><a href="#cb25-24" tabindex="-1"></a><span class="co">#&gt; Item_24 18.52007   0.690  550</span></span>
-<span id="cb25-25"><a href="#cb25-25" tabindex="-1"></a><span class="co">#&gt; Item_11 18.35649   0.696  576</span></span>
-<span id="cb25-26"><a href="#cb25-26" tabindex="-1"></a><span class="co">#&gt; Item_33 17.51145   0.700  450</span></span>
-<span id="cb25-27"><a href="#cb25-27" tabindex="-1"></a><span class="co">#&gt; Item_34 16.06359   0.735  450</span></span>
-<span id="cb25-28"><a href="#cb25-28" tabindex="-1"></a><span class="co">#&gt; Item_17 15.68125   0.759  424</span></span>
-<span id="cb25-29"><a href="#cb25-29" tabindex="-1"></a><span class="co">#&gt; Item_19 15.93857   0.769  424</span></span>
-<span id="cb25-30"><a href="#cb25-30" tabindex="-1"></a><span class="co">#&gt; Item_8  18.00935   0.773  576</span></span>
-<span id="cb25-31"><a href="#cb25-31" tabindex="-1"></a><span class="co">#&gt; Item_13 17.69414   0.782  576</span></span>
-<span id="cb25-32"><a href="#cb25-32" tabindex="-1"></a><span class="co">#&gt; Item_6  24.09979   0.796 1000</span></span>
-<span id="cb25-33"><a href="#cb25-33" tabindex="-1"></a><span class="co">#&gt; Item_15 15.36422   0.802  424</span></span>
-<span id="cb25-34"><a href="#cb25-34" tabindex="-1"></a><span class="co">#&gt; Item_25 16.05803   0.822  550</span></span>
-<span id="cb25-35"><a href="#cb25-35" tabindex="-1"></a><span class="co">#&gt; Item_28 17.04354   0.828  550</span></span>
-<span id="cb25-36"><a href="#cb25-36" tabindex="-1"></a><span class="co">#&gt; Item_22 16.08331   0.858  550</span></span>
-<span id="cb25-37"><a href="#cb25-37" tabindex="-1"></a><span class="co">#&gt; Item_4  16.80331   0.991 1000</span></span></code></pre></div>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="co">#&gt; Item_5  47.12704   0.049 1000</span></span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="co">#&gt; Item_2  44.09327   0.055 1000</span></span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a><span class="co">#&gt; Item_35 28.95484   0.071  450</span></span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a><span class="co">#&gt; Item_32 25.54950   0.128  450</span></span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="co">#&gt; Item_7  39.03102   0.173 1000</span></span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a><span class="co">#&gt; Item_23 25.68833   0.262  550</span></span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a><span class="co">#&gt; Item_12 26.29353   0.293  576</span></span>
+<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a><span class="co">#&gt; Item_20 21.53959   0.323  424</span></span>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a><span class="co">#&gt; Item_16 21.58565   0.350  424</span></span>
+<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a><span class="co">#&gt; Item_10 23.00194   0.405  576</span></span>
+<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a><span class="co">#&gt; Item_26 24.04213   0.405  550</span></span>
+<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a><span class="co">#&gt; Item_1  31.87110   0.414 1000</span></span>
+<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a><span class="co">#&gt; Item_27 22.10265   0.446  550</span></span>
+<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a><span class="co">#&gt; Item_3  29.74656   0.516 1000</span></span>
+<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a><span class="co">#&gt; Item_30 19.56794   0.526  450</span></span>
+<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a><span class="co">#&gt; Item_31 18.43406   0.568  450</span></span>
+<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a><span class="co">#&gt; Item_9  22.30023   0.571  576</span></span>
+<span id="cb25-21"><a href="#cb25-21" tabindex="-1"></a><span class="co">#&gt; Item_14 21.12367   0.582  576</span></span>
+<span id="cb25-22"><a href="#cb25-22" tabindex="-1"></a><span class="co">#&gt; Item_21 17.53189   0.628  424</span></span>
+<span id="cb25-23"><a href="#cb25-23" tabindex="-1"></a><span class="co">#&gt; Item_29 18.01397   0.647  450</span></span>
+<span id="cb25-24"><a href="#cb25-24" tabindex="-1"></a><span class="co">#&gt; Item_33 17.51145   0.683  450</span></span>
+<span id="cb25-25"><a href="#cb25-25" tabindex="-1"></a><span class="co">#&gt; Item_24 18.52007   0.686  550</span></span>
+<span id="cb25-26"><a href="#cb25-26" tabindex="-1"></a><span class="co">#&gt; Item_11 18.35649   0.704  576</span></span>
+<span id="cb25-27"><a href="#cb25-27" tabindex="-1"></a><span class="co">#&gt; Item_19 15.93857   0.746  424</span></span>
+<span id="cb25-28"><a href="#cb25-28" tabindex="-1"></a><span class="co">#&gt; Item_17 15.68125   0.757  424</span></span>
+<span id="cb25-29"><a href="#cb25-29" tabindex="-1"></a><span class="co">#&gt; Item_34 16.06359   0.758  450</span></span>
+<span id="cb25-30"><a href="#cb25-30" tabindex="-1"></a><span class="co">#&gt; Item_8  18.00935   0.768  576</span></span>
+<span id="cb25-31"><a href="#cb25-31" tabindex="-1"></a><span class="co">#&gt; Item_13 17.69414   0.790  576</span></span>
+<span id="cb25-32"><a href="#cb25-32" tabindex="-1"></a><span class="co">#&gt; Item_15 15.36422   0.799  424</span></span>
+<span id="cb25-33"><a href="#cb25-33" tabindex="-1"></a><span class="co">#&gt; Item_25 16.05803   0.811  550</span></span>
+<span id="cb25-34"><a href="#cb25-34" tabindex="-1"></a><span class="co">#&gt; Item_6  24.09979   0.815 1000</span></span>
+<span id="cb25-35"><a href="#cb25-35" tabindex="-1"></a><span class="co">#&gt; Item_28 17.04354   0.860  550</span></span>
+<span id="cb25-36"><a href="#cb25-36" tabindex="-1"></a><span class="co">#&gt; Item_22 16.08331   0.865  550</span></span>
+<span id="cb25-37"><a href="#cb25-37" tabindex="-1"></a><span class="co">#&gt; Item_4  16.80331   0.987 1000</span></span></code></pre></div>
 <p>The results are very similar to those of the bootstrap DIF test.</p>
 </div>
 <div id="conclusion" class="section level3">
